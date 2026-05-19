@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+// задача на комплексный класс с перегрузом Раньше была где то в 1/2 семестре на проге если вела кафедра волны. В целом ничего сложного ее сдавать было не обязательно
 
 class Complex {
 private:
@@ -40,7 +41,7 @@ public:
 	explicit operator double() const {
 		return Module();
 	}
-	// ���������� �������������� ����������
+	// ïåðåãðóçêà ìàòåìàòè÷åñêèõ îïåðàòîðîâ
 	friend Complex operator+(const Complex& a, const Complex& b) {
 		return Complex(a.norm + b.norm, a.irr + b.irr);
 	}
@@ -85,7 +86,7 @@ public:
 	friend Complex operator-(const Complex& a) {
 		return Complex(-a.norm, -a.irr);
 	}
-	//����������  ����������  ���������
+	//ïåðåãðóçêà  îïåðàòîðîâ  ñðàâíåíèÿ
 	friend bool operator==(const Complex& a, const Complex& b) {
 		return (a.norm == b.norm) && (a.irr == b.irr);
 	}
