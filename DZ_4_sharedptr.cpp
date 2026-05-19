@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-
-// move semantic ����
+//На самом деле не сложное задание помоему меня просили реализовать мув семантику сделана через оператор присваивания и конструктор 
+// move semantic ñþäà
 template<typename T>
 class SharedPtr {
 private:
